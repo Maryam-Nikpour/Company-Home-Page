@@ -32,6 +32,7 @@ align-items: center;
     text-decoration: underline;
     cursor: pointer;
 }
+/* banner section */
 .banner{
     background-image: url(images/banner/mathias-tonnesson-GwPKJQUU1Dw-unsplash.jpg);
     height: 100vh;
@@ -59,4 +60,20 @@ align-items: center;
 }
 .banner p{
     font-size: 20px;
+}
+
+/* about section */
+.about{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+align-items: center;
+line-height: 1.5;
+
+}
+.about p{
+    max-width: 450px;
+    font-family: 'Playball',sans-serif;
+    font-size: 20px;
+    margin-top:8%;
 }
