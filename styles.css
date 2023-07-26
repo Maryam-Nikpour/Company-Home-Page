@@ -98,12 +98,13 @@ align-items: center;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+ 
 
 }
 .cocktails img{
-    width: 300px;
-    min-height:300PX ;
+    width: 350px;
     margin: 30px;
+    height: 350px;
    
    
 }
@@ -117,6 +118,8 @@ align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 30px;
+   
 
 }
 .cocktails p{
@@ -144,5 +147,18 @@ align-items: center;
     width: 300px;
     height: 400px;
    
+}
+/* footer*/
+.footer{
+    height: 100px;
+    background-color: #041945;
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+    align-items: center;
+}
+.footer p{
+    margin: 20px;
+
 }
     
