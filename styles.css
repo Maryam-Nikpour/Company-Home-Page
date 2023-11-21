@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 .header{
     display: flex;
     height: 100px;
@@ -43,23 +46,26 @@ align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
     opacity: 0.9;
 
 }
 .content{
-   font-size: 40px;
    color:white;
    display: flex;
    flex-direction: column;
    justify-content: center;
    font-weight: bold;
    align-items: center; 
+   max-width:800px;
+   text-align: center;
   
 }
+.banner h1{
+    font-size:clamp(2rem, 5vw, 4rem);
+}
 .banner p{
-    font-size: 20px;
+    font-size:clamp(0.8rem,2vw, 1.2rem);
 }
 
 /* about section */
@@ -79,6 +85,7 @@ align-items: center;
     font-family: 'Playball',sans-serif;
     font-size: 20px;
     margin:80px;
+    text-align: justify;
  
     
    
@@ -135,6 +142,7 @@ align-items: center;
 .bottle-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
    
 }
