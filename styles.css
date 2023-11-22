@@ -2,10 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior:smooth;
 }
 body{
     width: 100%;
     height: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+ul, ul a {
+    text-decoration: none;
+    list-style: none;
+    color: unset;
 }
 .header{
     display: flex;
@@ -35,6 +43,12 @@ align-items: center;
     color: #344CE3;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {  
+    .nav-list{
+        display: none;
+    }
 }
 /* banner section */
 .banner{
