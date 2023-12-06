@@ -17,16 +17,18 @@ ul, ul a {
 }
 .header{
     display: flex;
-    height: 100px;
     background-color:#041945;
     justify-content: space-between;
+    align-items: center;
     padding: 0 2rem;
     font-weight: bold;
     font-size: 18px;
+    position: fixed;
+    width: 100%;
     
 }
 .logo img{
-height: 100%;
+  height: 80px;
 
 }
 .nav-list{
@@ -34,22 +36,69 @@ color: white;
 list-style: none;
 display: flex;
 align-items: center;
+justify-content: space-between;
+gap: 60px;
+
 
 }
 .nav-list li{
-  padding-left: 3rem;
-}
-.nav-list li:hover{
-    color: #344CE3;
-    text-decoration: underline;
-    cursor: pointer;
+    transition: 0.5s ease;
 }
 
-@media screen and (max-width: 576px) {  
-    .nav-list{
-        display: none;
-    }
+.nav-list li:hover{
+    color: #344CE3;
+    cursor: pointer;
 }
+.hamburger{
+  display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out ;
+    background-color: white;
+
+}
+
+@media screen and (max-width: 768px) {  
+    .hamburger{
+        display: block;
+        margin-right: 1rem;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+      }
+  .hamburger.active .bar:nth-child(1){
+   transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+   }
+   .nav-list{
+    border-top: 1px solid white;
+    position: fixed;
+    left: -100%;
+    top:80px;
+    gap: 0;
+    flex-direction: column;
+    background-color:#041945;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+.nav-list li{
+    margin: 16px 0;
+
+}
+.nav-list.active{
+    left: 0;
+
+}
+ }
 /* banner section */
 .banner{
     background-image: url(images/banner/mathias-tonnesson-GwPKJQUU1Dw-unsplash.jpg);
@@ -61,7 +110,7 @@ align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    opacity: 0.9;
+  
    
 
 }
@@ -153,10 +202,7 @@ padding:1rem 2rem;
 .bottle-container{
     display: flex;
     justify-content: center;
-    gap: 4em;
     flex-wrap: wrap;
-
-   
 }
 .featured-products h1{
     text-align: center;
